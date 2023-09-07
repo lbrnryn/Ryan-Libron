@@ -15,9 +15,7 @@ app.set('json spaces', 2);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
-  res.render("home");
-});
+app.get('/', (req, res) => res.render("home"));
 
 const port = process.env.PORT || 2000;
 app.listen(port, () => console.log(`Server listening on port: ${port}`));
